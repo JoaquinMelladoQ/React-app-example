@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
+import H1 from './H1';
 
 
 const styles = {
@@ -36,7 +37,7 @@ export default class Headers extends Component {
         return(
             <header onClick={ this.cambiarColorHeader }  style={styles.header({ backgroundColor })}>
                 <img src={logo} className="App-logo" alt="logo" />
-                <h1 onClick={ this.manejaClick } className="App-title">{ miau }</h1>
+                <H1>{ miau }</H1>
             </header>
         )
     }
