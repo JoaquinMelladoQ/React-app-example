@@ -5,7 +5,7 @@ export default class Parag extends Component {
         const { children } = this.props
         return (
             <div>
-                <p onClick={ this.cambiarTextoDelEstado }  className="App-intro">
+                <p className="App-intro">
                     { children }
                 </p>
             </div>

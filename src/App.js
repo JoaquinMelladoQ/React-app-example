@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Headers from './Components/Headers';
 import './App.css';
+import Parag from './Components/Parag';
 
 class App extends Component {
 
@@ -20,9 +21,9 @@ class App extends Component {
     return (
       <div className="App">
         <Headers miau={ miau } manejaClick={ this.manejaClick } />
-        <p onClick={ this.cambiarTextoDelEstado }  className="App-intro">
-          { miau }
-        </p>
+        <Parag>
+            { miau }
+        </Parag>
       </div>
     )
   } 
