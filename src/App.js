@@ -5,25 +5,10 @@ import Parag from './Components/Parag';
 
 class App extends Component {
 
-  state = {
-    miau: 'Bienvenido a miau'
-  }
-
-  cambiarTextoDelEstado = () => {
-    this.setState({ miau: 'Hola mundo' })
-  }
-
-  manejaClick = texto => {
-    console.log(texto)
-  }
   render() {
-    const { miau } = this.state
     return (
       <div className="App">
-        <Headers miau={ miau } manejaClick={ this.manejaClick } />
-        <Parag onClick={ this.cambiarTextoDelEstado } >
-            { miau }
-        </Parag>
+        Hola mundo
       </div>
     )
   } 

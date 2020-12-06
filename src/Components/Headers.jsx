@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
-import H1 from './H1';
+import H1 from './H1'
 
 
 const styles = {
