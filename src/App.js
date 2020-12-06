@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <div className="App">
         <Headers miau={ miau } manejaClick={ this.manejaClick } />
-        <Parag>
+        <Parag onClick={ this.cambiarTextoDelEstado } >
             { miau }
         </Parag>
       </div>
