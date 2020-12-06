@@ -17,10 +17,9 @@ class App extends Component {
   }
   render() {
     const { miau } = this.state
-    const texto = 'Welcome Miau'
     return (
       <div className="App">
-        <Headers miau={ texto } manejaClick={ this.manejaClick } />
+        <Headers miau={ miau } manejaClick={ this.manejaClick } />
         <p onClick={ this.cambiarTextoDelEstado }  className="App-intro">
           { miau }
         </p>
