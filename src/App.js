@@ -3,8 +3,8 @@ import Headers from './Components/Headers';
 import './App.css';
 
 class App extends Component {
-  manejaClick = () => {
-    console.log('he sido clickeado!!!!!')
+  manejaClick = texto => {
+    console.log(texto)
   }
   render() {
     const miau = 'Welcome Miau'
