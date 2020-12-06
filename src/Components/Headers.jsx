@@ -3,8 +3,8 @@ import logo from '../logo.svg';
 
 
 const styles = {
-    header: () => ({
-        backgroundColor: '#282c34',
+    header: ({ backgroundColor }) => ({
+        backgroundColor,
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
@@ -17,6 +17,14 @@ const styles = {
 
 export default class Headers extends Component {
 
+    state = {
+        backgroundColor: '#282c34'
+    }
+
+    cambiarColorHeader = () => {
+        this.setState({ backgroundColor: '#555' })
+    }
+
     manejaClick = () => {
         const { manejaClick, miau } = this.props
         manejaClick(miau)
@@ -24,8 +32,9 @@ export default class Headers extends Component {
 
     render() {
         const { miau, manejaClick } = this.props
+        const { backgroundColor } = this.state
         return(
-            <header style={styles.header()}>
+            <header onClick={ this.cambiarColorHeader }  style={styles.header({ backgroundColor })}>
                 <img src={logo} className="App-logo" alt="logo" />
                 <h1 onClick={ this.manejaClick } className="App-title">{ miau }</h1>
             </header>
