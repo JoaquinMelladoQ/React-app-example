@@ -28,6 +28,7 @@ export default class FormularioSimple extends Component {
                 <input name="nombre" onChange={this.handleChange} />
                     {errors.nombre && <Parag>{errors.nombre}</Parag>}
                 <input name="apellido" onChange={this.handleChange} />
+                    {errors.apellido && <Parag>{errors.apellido}</Parag>}
                 <input type="submit" value="Enviar"/>
             </form>
         )
