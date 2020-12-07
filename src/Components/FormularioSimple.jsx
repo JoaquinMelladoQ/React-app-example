@@ -31,7 +31,7 @@ export default class FormularioSimple extends Component {
         const { errors, ...sinErrors } = this.state
         const result = validate(sinErrors)
 
-        if (Object.keys(result)) {
+        if (Object.keys(result).length) {
             return this.setState({ errors: result })
         }
     }
