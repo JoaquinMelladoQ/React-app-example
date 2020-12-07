@@ -4,7 +4,9 @@ import FormularioSimple from './Components/FormularioSimple'
 class App extends Component {
   constructor(){
     super()
-    console.log('ajax con fetch ')
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(x => x.json())
+      .then(x => console.log(x))
   }
 
   render() {
