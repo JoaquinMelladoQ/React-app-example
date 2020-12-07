@@ -30,9 +30,11 @@ export default class FormularioSimple extends Component {
         e.preventDefault() 
         const { errors, ...sinErrors } = this.state
         const result = validate(sinErrors)
+        
+        this.setState({ errors: result })
 
-        if (Object.keys(result).length) {
-            return this.setState({ errors: result })
+        if (!Object.keys(result).length) {
+            console.log('formulario enviado')
         }
     }
 
