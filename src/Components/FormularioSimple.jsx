@@ -4,7 +4,12 @@ import Parag from './Parag'
 
 const validate = values => {
     const errors = {}
-    console.log(values)
+    if (!values.nombre) {
+        errors.nombre = 'Este campo es obligatorio' 
+    }
+    if (!values.apellido) {
+        errors.apellido = 'Este campo es obligatorio' 
+    }
 
     return errors 
 }
