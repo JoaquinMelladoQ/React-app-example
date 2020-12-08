@@ -7,8 +7,9 @@ class App extends Component {
     super()
 
     axios.get('https://jsonplaceholder.typicode.com/users')
-    
-    // fetch('https://jsonplaceholder.typicode.com/users')
+      .then(({ data }) => console.log({ data }))
+
+    // fetch('https://jsonplaceholder.typicode.com/users') 
     //   .then(x => x.json())
     //   .then(x => console.log(x))
 
