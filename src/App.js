@@ -6,8 +6,13 @@ class App extends Component {
   constructor(){
     super()
 
-    axios.get('https://jsonplaceholder.typicode.com/users')
-      .then(({ data }) => console.log({ data }))
+    axios.post('https://jsonplaceholder.typicode.com/users', {
+      name: 'Joaco Mellado',
+      username: 'jom'
+    }).then(({ data }) => console.log( data )) 
+
+    // axios.get('https://jsonplaceholder.typicode.com/users')
+    //   .then(({ data }) => console.log({ data }))
 
     // fetch('https://jsonplaceholder.typicode.com/users') 
     //   .then(x => x.json())
